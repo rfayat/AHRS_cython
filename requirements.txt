@@ -1,0 +1,5 @@
+numpy>=1.21
+Cython>=0.29
+ahrs==0.3.0
+pandas
+matplotlib
