@@ -8,7 +8,7 @@ ctypedef np.float_t DTYPE_t
 
 
 # -------------------------------------------------------
-#                                             Madgwick IMU
+#                     Madgwick IMU
 # -------------------------------------------------------
 cdef gradientMadgwickIMU(double q0, double q1, double q2, double q3,
                          double ax, double ay, double az):
@@ -45,14 +45,15 @@ cdef gradientMadgwickIMU(double q0, double q1, double q2, double q3,
 
     return(s0, s1, s2, s3)
 
+
 # @cython.cdivision(False)
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cdef madgwickIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,
-                                        np.ndarray[DTYPE_t, ndim=1] gyrStep,
-                                        np.ndarray[DTYPE_t, ndim=1] quatStep,
-                                        double beta,
-                                        double sampleFreq):
+                     np.ndarray[DTYPE_t, ndim=1] gyrStep,
+                     np.ndarray[DTYPE_t, ndim=1] quatStep,
+                     double beta,
+                     double sampleFreq):
     "Step for the IMU algorithm (could be used for real-time computation)."
     cdef double gx, gy, gz, ax, ay, az, q0, q1, q2, q3
     cdef double qDot1, qDot2, qDot3, qDot4
@@ -101,14 +102,15 @@ cdef madgwickIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,
 
     return(quatStep)
 
+
 @cython.boundscheck(False)
 @cython.wraparound(False)
 def madgwickIMU(np.ndarray[DTYPE_t, ndim=2] acc,
-                                np.ndarray[DTYPE_t, ndim=2] gyr,
-                                np.ndarray[DTYPE_t, ndim=1] quat0,
-                                double beta,
-                                double sampleFreq):
-    cdef int n_row    = acc.shape[0]
+                np.ndarray[DTYPE_t, ndim=2] gyr,
+                np.ndarray[DTYPE_t, ndim=1] quat0,
+                double beta,
+                double sampleFreq):
+    cdef int n_row = acc.shape[0]
     cdef int row = 0
     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
     quat[0,:] = quat0
@@ -120,11 +122,11 @@ def madgwickIMU(np.ndarray[DTYPE_t, ndim=2] acc,
     return(quat)
 
 # -------------------------------------------------------
-#                                             Madgwick AHRS
+#                Madgwick AHRS
 # -------------------------------------------------------
 cdef gradientMadgwickAHRS(double q0, double q1, double q2, double q3,
-                                                    double ax, double ay, double az,
-                                                    double mx, double my, double mz):
+                          double ax, double ay, double az,
+                          double mx, double my, double mz):
     """
     Compute the gradient decent algorithm corrective step for Madgwick's AHRS algorithm.
     """
@@ -177,13 +179,14 @@ cdef gradientMadgwickAHRS(double q0, double q1, double q2, double q3,
     s3 *= recipNorm
     return(s0, s1, s2, s3)
 
+
 @cython.boundscheck(False)
 @cython.wraparound(False)
 cdef madgwickAHRSStep(np.ndarray[DTYPE_t, ndim=1] accStep,
-                                            np.ndarray[DTYPE_t, ndim=1] gyrStep,
-                                            np.ndarray[DTYPE_t, ndim=1] magStep,
-                                            np.ndarray[DTYPE_t, ndim=1] quatStep,
-                                            double beta, double sampleFreq):
+                      np.ndarray[DTYPE_t, ndim=1] gyrStep,
+                      np.ndarray[DTYPE_t, ndim=1] magStep,
+                      np.ndarray[DTYPE_t, ndim=1] quatStep,
+                      double beta, double sampleFreq):
     # Preallocation
     cdef double gx, gy, gz, ax, ay, az, mx, my, mz, q0, q1, q2, q3
     cdef double qDot1, qDot2, qDot3, qDot4
@@ -239,16 +242,17 @@ cdef madgwickAHRSStep(np.ndarray[DTYPE_t, ndim=1] accStep,
 
     return(quatStep)
 
+
 @cython.boundscheck(False)
 @cython.wraparound(False)
 def madgwickAHRS(np.ndarray[DTYPE_t, ndim=2] acc,
-                                np.ndarray[DTYPE_t, ndim=2] gyr,
-                                np.ndarray[DTYPE_t, ndim=2] mag,
-                                np.ndarray[DTYPE_t, ndim=1] quat0,
-                                double beta, double sampleFreq):
-    cdef int n_row    = acc.shape[0]
+                 np.ndarray[DTYPE_t, ndim=2] gyr,
+                 np.ndarray[DTYPE_t, ndim=2] mag,
+                 np.ndarray[DTYPE_t, ndim=1] quat0,
+                 double beta, double sampleFreq):
+    cdef int n_row = acc.shape[0]
     cdef int row = 0
-    cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
+    cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)
     quat[0,:] = quat0
 
     # Iteratively update the value of the quaternion and store it in quat

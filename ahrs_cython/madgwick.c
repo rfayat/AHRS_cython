@@ -4331,7 +4331,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
 }
 
 /* "ahrs_cython/madgwick.pyx":13
- * #                                             Madgwick IMU
+ * #                     Madgwick IMU
  * # -------------------------------------------------------
  * cdef gradientMadgwickIMU(double q0, double q1, double q2, double q3,             # <<<<<<<<<<<<<<
  *                          double ax, double ay, double az):
@@ -4578,7 +4578,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickIMU(double __py
  * 
  *     return(s0, s1, s2, s3)             # <<<<<<<<<<<<<<
  * 
- * # @cython.cdivision(False)
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
@@ -4608,7 +4608,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickIMU(double __py
   goto __pyx_L0;
 
   /* "ahrs_cython/madgwick.pyx":13
- * #                                             Madgwick IMU
+ * #                     Madgwick IMU
  * # -------------------------------------------------------
  * cdef gradientMadgwickIMU(double q0, double q1, double q2, double q3,             # <<<<<<<<<<<<<<
  *                          double ax, double ay, double az):
@@ -4630,12 +4630,12 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickIMU(double __py
   return __pyx_r;
 }
 
-/* "ahrs_cython/madgwick.pyx":51
+/* "ahrs_cython/madgwick.pyx":52
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef madgwickIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,             # <<<<<<<<<<<<<<
- *                                         np.ndarray[DTYPE_t, ndim=1] gyrStep,
- *                                         np.ndarray[DTYPE_t, ndim=1] quatStep,
+ *                      np.ndarray[DTYPE_t, ndim=1] gyrStep,
+ *                      np.ndarray[DTYPE_t, ndim=1] quatStep,
  */
 
 static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *__pyx_v_accStep, PyArrayObject *__pyx_v_gyrStep, PyArrayObject *__pyx_v_quatStep, double __pyx_v_beta, double __pyx_v_sampleFreq) {
@@ -4702,21 +4702,21 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_pybuffernd_quatStep.rcbuffer = &__pyx_pybuffer_quatStep;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_accStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 51, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_accStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 52, __pyx_L1_error)
   }
   __pyx_pybuffernd_accStep.diminfo[0].strides = __pyx_pybuffernd_accStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_accStep.diminfo[0].shape = __pyx_pybuffernd_accStep.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyrStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyrStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 51, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyrStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyrStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 52, __pyx_L1_error)
   }
   __pyx_pybuffernd_gyrStep.diminfo[0].strides = __pyx_pybuffernd_gyrStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_gyrStep.diminfo[0].shape = __pyx_pybuffernd_gyrStep.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quatStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_quatStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 51, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quatStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_quatStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 52, __pyx_L1_error)
   }
   __pyx_pybuffernd_quatStep.diminfo[0].strides = __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quatStep.diminfo[0].shape = __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.shape[0];
 
-  /* "ahrs_cython/madgwick.pyx":63
+  /* "ahrs_cython/madgwick.pyx":64
  * 
  *     # Grab acc, gyr and quat values
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]             # <<<<<<<<<<<<<<
@@ -4733,7 +4733,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_v_gy = __pyx_t_3;
   __pyx_v_gz = __pyx_t_4;
 
-  /* "ahrs_cython/madgwick.pyx":64
+  /* "ahrs_cython/madgwick.pyx":65
  *     # Grab acc, gyr and quat values
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]
  *     ax, ay, az = accStep[0], accStep[1], accStep[2]             # <<<<<<<<<<<<<<
@@ -4750,7 +4750,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_v_ay = __pyx_t_3;
   __pyx_v_az = __pyx_t_2;
 
-  /* "ahrs_cython/madgwick.pyx":65
+  /* "ahrs_cython/madgwick.pyx":66
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]
  *     ax, ay, az = accStep[0], accStep[1], accStep[2]
  *     q0, q1, q2, q3 = quatStep[0], quatStep[1], quatStep[2], quatStep[3]             # <<<<<<<<<<<<<<
@@ -4770,7 +4770,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_v_q2 = __pyx_t_4;
   __pyx_v_q3 = __pyx_t_5;
 
-  /* "ahrs_cython/madgwick.pyx":68
+  /* "ahrs_cython/madgwick.pyx":69
  * 
  *     # Rate of change of quaternion from gyroscope
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)             # <<<<<<<<<<<<<<
@@ -4779,7 +4779,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   __pyx_v_qDot1 = (0.5 * ((((-__pyx_v_q1) * __pyx_v_gx) - (__pyx_v_q2 * __pyx_v_gy)) - (__pyx_v_q3 * __pyx_v_gz)));
 
-  /* "ahrs_cython/madgwick.pyx":69
+  /* "ahrs_cython/madgwick.pyx":70
  *     # Rate of change of quaternion from gyroscope
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)             # <<<<<<<<<<<<<<
@@ -4788,7 +4788,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   __pyx_v_qDot2 = (0.5 * (((__pyx_v_q0 * __pyx_v_gx) + (__pyx_v_q2 * __pyx_v_gz)) - (__pyx_v_q3 * __pyx_v_gy)));
 
-  /* "ahrs_cython/madgwick.pyx":70
+  /* "ahrs_cython/madgwick.pyx":71
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)
  *     qDot3 = 0.5 * (q0 * gy - q1 * gz + q3 * gx)             # <<<<<<<<<<<<<<
@@ -4797,7 +4797,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   __pyx_v_qDot3 = (0.5 * (((__pyx_v_q0 * __pyx_v_gy) - (__pyx_v_q1 * __pyx_v_gz)) + (__pyx_v_q3 * __pyx_v_gx)));
 
-  /* "ahrs_cython/madgwick.pyx":71
+  /* "ahrs_cython/madgwick.pyx":72
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)
  *     qDot3 = 0.5 * (q0 * gy - q1 * gz + q3 * gx)
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)             # <<<<<<<<<<<<<<
@@ -4806,7 +4806,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   __pyx_v_qDot4 = (0.5 * (((__pyx_v_q0 * __pyx_v_gz) + (__pyx_v_q1 * __pyx_v_gy)) - (__pyx_v_q2 * __pyx_v_gx)));
 
-  /* "ahrs_cython/madgwick.pyx":73
+  /* "ahrs_cython/madgwick.pyx":74
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)
  * 
  *     if ax!=0 or ay!=0 or az!=0:             # <<<<<<<<<<<<<<
@@ -4830,7 +4830,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_6) {
 
-    /* "ahrs_cython/madgwick.pyx":75
+    /* "ahrs_cython/madgwick.pyx":76
  *     if ax!=0 or ay!=0 or az!=0:
  *         # Normalise accelerometer measurement
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)             # <<<<<<<<<<<<<<
@@ -4840,11 +4840,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
     __pyx_t_8 = sqrt((((__pyx_v_ax * __pyx_v_ax) + (__pyx_v_ay * __pyx_v_ay)) + (__pyx_v_az * __pyx_v_az)));
     if (unlikely(__pyx_t_8 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 75, __pyx_L1_error)
+      __PYX_ERR(0, 76, __pyx_L1_error)
     }
     __pyx_v_recipNorm = (1.0 / __pyx_t_8);
 
-    /* "ahrs_cython/madgwick.pyx":76
+    /* "ahrs_cython/madgwick.pyx":77
  *         # Normalise accelerometer measurement
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)
  *         ax *= recipNorm             # <<<<<<<<<<<<<<
@@ -4853,7 +4853,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_ax = (__pyx_v_ax * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":77
+    /* "ahrs_cython/madgwick.pyx":78
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)
  *         ax *= recipNorm
  *         ay *= recipNorm             # <<<<<<<<<<<<<<
@@ -4862,7 +4862,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_ay = (__pyx_v_ay * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":78
+    /* "ahrs_cython/madgwick.pyx":79
  *         ax *= recipNorm
  *         ay *= recipNorm
  *         az *= recipNorm             # <<<<<<<<<<<<<<
@@ -4871,14 +4871,14 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_az = (__pyx_v_az * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":81
+    /* "ahrs_cython/madgwick.pyx":82
  * 
  *         # Gradient descent algorithm corrective step
  *         s0, s1, s2, s3 = gradientMadgwickIMU(q0, q1, q2, q3, ax, ay, az)             # <<<<<<<<<<<<<<
  * 
  *         # Apply feedback step
  */
-    __pyx_t_9 = __pyx_f_11ahrs_cython_8madgwick_gradientMadgwickIMU(__pyx_v_q0, __pyx_v_q1, __pyx_v_q2, __pyx_v_q3, __pyx_v_ax, __pyx_v_ay, __pyx_v_az); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_9 = __pyx_f_11ahrs_cython_8madgwick_gradientMadgwickIMU(__pyx_v_q0, __pyx_v_q1, __pyx_v_q2, __pyx_v_q3, __pyx_v_ax, __pyx_v_ay, __pyx_v_az); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     if ((likely(PyTuple_CheckExact(__pyx_t_9))) || (PyList_CheckExact(__pyx_t_9))) {
       PyObject* sequence = __pyx_t_9;
@@ -4886,7 +4886,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
       if (unlikely(size != 4)) {
         if (size > 4) __Pyx_RaiseTooManyValuesError(4);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 81, __pyx_L1_error)
+        __PYX_ERR(0, 82, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -4909,7 +4909,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
         Py_ssize_t i;
         PyObject** temps[4] = {&__pyx_t_10,&__pyx_t_11,&__pyx_t_12,&__pyx_t_13};
         for (i=0; i < 4; i++) {
-          PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 81, __pyx_L1_error)
+          PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 82, __pyx_L1_error)
           __Pyx_GOTREF(item);
           *(temps[i]) = item;
         }
@@ -4919,7 +4919,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
     } else {
       Py_ssize_t index = -1;
       PyObject** temps[4] = {&__pyx_t_10,&__pyx_t_11,&__pyx_t_12,&__pyx_t_13};
-      __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 81, __pyx_L1_error)
+      __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 82, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_15 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_14);
@@ -4928,7 +4928,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
         __Pyx_GOTREF(item);
         *(temps[index]) = item;
       }
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 4) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 4) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
       __pyx_t_15 = NULL;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       goto __pyx_L8_unpacking_done;
@@ -4936,23 +4936,23 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 81, __pyx_L1_error)
+      __PYX_ERR(0, 82, __pyx_L1_error)
       __pyx_L8_unpacking_done:;
     }
-    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_t_12); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_t_12); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_v_s0 = __pyx_t_8;
     __pyx_v_s1 = __pyx_t_16;
     __pyx_v_s2 = __pyx_t_17;
     __pyx_v_s3 = __pyx_t_18;
 
-    /* "ahrs_cython/madgwick.pyx":84
+    /* "ahrs_cython/madgwick.pyx":85
  * 
  *         # Apply feedback step
  *         qDot1 -= beta * s0             # <<<<<<<<<<<<<<
@@ -4961,7 +4961,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_qDot1 = (__pyx_v_qDot1 - (__pyx_v_beta * __pyx_v_s0));
 
-    /* "ahrs_cython/madgwick.pyx":85
+    /* "ahrs_cython/madgwick.pyx":86
  *         # Apply feedback step
  *         qDot1 -= beta * s0
  *         qDot2 -= beta * s1             # <<<<<<<<<<<<<<
@@ -4970,7 +4970,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_qDot2 = (__pyx_v_qDot2 - (__pyx_v_beta * __pyx_v_s1));
 
-    /* "ahrs_cython/madgwick.pyx":86
+    /* "ahrs_cython/madgwick.pyx":87
  *         qDot1 -= beta * s0
  *         qDot2 -= beta * s1
  *         qDot3 -= beta * s2             # <<<<<<<<<<<<<<
@@ -4979,7 +4979,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_qDot3 = (__pyx_v_qDot3 - (__pyx_v_beta * __pyx_v_s2));
 
-    /* "ahrs_cython/madgwick.pyx":87
+    /* "ahrs_cython/madgwick.pyx":88
  *         qDot2 -= beta * s1
  *         qDot3 -= beta * s2
  *         qDot4 -= beta * s3             # <<<<<<<<<<<<<<
@@ -4988,7 +4988,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
     __pyx_v_qDot4 = (__pyx_v_qDot4 - (__pyx_v_beta * __pyx_v_s3));
 
-    /* "ahrs_cython/madgwick.pyx":73
+    /* "ahrs_cython/madgwick.pyx":74
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)
  * 
  *     if ax!=0 or ay!=0 or az!=0:             # <<<<<<<<<<<<<<
@@ -4997,7 +4997,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   }
 
-  /* "ahrs_cython/madgwick.pyx":90
+  /* "ahrs_cython/madgwick.pyx":91
  * 
  *     # Integrate rate of change of quaternion
  *     q0 += qDot1 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -5006,11 +5006,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 90, __pyx_L1_error)
+    __PYX_ERR(0, 91, __pyx_L1_error)
   }
   __pyx_v_q0 = (__pyx_v_q0 + (__pyx_v_qDot1 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":91
+  /* "ahrs_cython/madgwick.pyx":92
  *     # Integrate rate of change of quaternion
  *     q0 += qDot1 * (1.0 / sampleFreq)
  *     q1 += qDot2 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -5019,11 +5019,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 91, __pyx_L1_error)
+    __PYX_ERR(0, 92, __pyx_L1_error)
   }
   __pyx_v_q1 = (__pyx_v_q1 + (__pyx_v_qDot2 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":92
+  /* "ahrs_cython/madgwick.pyx":93
  *     q0 += qDot1 * (1.0 / sampleFreq)
  *     q1 += qDot2 * (1.0 / sampleFreq)
  *     q2 += qDot3 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -5032,11 +5032,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 92, __pyx_L1_error)
+    __PYX_ERR(0, 93, __pyx_L1_error)
   }
   __pyx_v_q2 = (__pyx_v_q2 + (__pyx_v_qDot3 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":93
+  /* "ahrs_cython/madgwick.pyx":94
  *     q1 += qDot2 * (1.0 / sampleFreq)
  *     q2 += qDot3 * (1.0 / sampleFreq)
  *     q3 += qDot4 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -5045,11 +5045,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 93, __pyx_L1_error)
+    __PYX_ERR(0, 94, __pyx_L1_error)
   }
   __pyx_v_q3 = (__pyx_v_q3 + (__pyx_v_qDot4 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":96
+  /* "ahrs_cython/madgwick.pyx":97
  * 
  *     # Normalise quaternion
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)             # <<<<<<<<<<<<<<
@@ -5059,11 +5059,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_t_18 = sqrt(((((__pyx_v_q0 * __pyx_v_q0) + (__pyx_v_q1 * __pyx_v_q1)) + (__pyx_v_q2 * __pyx_v_q2)) + (__pyx_v_q3 * __pyx_v_q3)));
   if (unlikely(__pyx_t_18 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 96, __pyx_L1_error)
+    __PYX_ERR(0, 97, __pyx_L1_error)
   }
   __pyx_v_recipNorm = (1.0 / __pyx_t_18);
 
-  /* "ahrs_cython/madgwick.pyx":97
+  /* "ahrs_cython/madgwick.pyx":98
  *     # Normalise quaternion
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)
  *     quatStep[0] = q0 * recipNorm             # <<<<<<<<<<<<<<
@@ -5073,7 +5073,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_t_1 = 0;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q0 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":98
+  /* "ahrs_cython/madgwick.pyx":99
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)
  *     quatStep[0] = q0 * recipNorm
  *     quatStep[1] = q1 * recipNorm             # <<<<<<<<<<<<<<
@@ -5083,7 +5083,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_t_1 = 1;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q1 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":99
+  /* "ahrs_cython/madgwick.pyx":100
  *     quatStep[0] = q0 * recipNorm
  *     quatStep[1] = q1 * recipNorm
  *     quatStep[2] = q2 * recipNorm             # <<<<<<<<<<<<<<
@@ -5093,7 +5093,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_t_1 = 2;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q2 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":100
+  /* "ahrs_cython/madgwick.pyx":101
  *     quatStep[1] = q1 * recipNorm
  *     quatStep[2] = q2 * recipNorm
  *     quatStep[3] = q3 * recipNorm             # <<<<<<<<<<<<<<
@@ -5103,24 +5103,24 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   __pyx_t_1 = 3;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q3 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":102
+  /* "ahrs_cython/madgwick.pyx":103
  *     quatStep[3] = q3 * recipNorm
  * 
  *     return(quatStep)             # <<<<<<<<<<<<<<
  * 
- * @cython.boundscheck(False)
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_quatStep);
   __pyx_r = ((PyObject *)__pyx_v_quatStep);
   goto __pyx_L0;
 
-  /* "ahrs_cython/madgwick.pyx":51
+  /* "ahrs_cython/madgwick.pyx":52
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef madgwickIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,             # <<<<<<<<<<<<<<
- *                                         np.ndarray[DTYPE_t, ndim=1] gyrStep,
- *                                         np.ndarray[DTYPE_t, ndim=1] quatStep,
+ *                      np.ndarray[DTYPE_t, ndim=1] gyrStep,
+ *                      np.ndarray[DTYPE_t, ndim=1] quatStep,
  */
 
   /* function exit code */
@@ -5152,8 +5152,8 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(PyArrayObject *
   return __pyx_r;
 }
 
-/* "ahrs_cython/madgwick.pyx":104
- *     return(quatStep)
+/* "ahrs_cython/madgwick.pyx":106
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
@@ -5225,7 +5225,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5233,9 +5233,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 1); __PYX_ERR(0, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 1); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -5243,9 +5243,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 2); __PYX_ERR(0, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 2); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -5253,9 +5253,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 3); __PYX_ERR(0, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 3); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -5263,14 +5263,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 104, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 106, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 4); __PYX_ERR(0, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, 4); __PYX_ERR(0, 106, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "madgwickIMU") < 0)) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "madgwickIMU") < 0)) __PYX_ERR(0, 106, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 5)) {
       goto __pyx_L5_argtuple_error;
@@ -5284,12 +5284,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_acc = ((PyArrayObject *)values[0]);
     __pyx_v_gyr = ((PyArrayObject *)values[1]);
     __pyx_v_quat0 = ((PyArrayObject *)values[2]);
-    __pyx_v_beta = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_beta == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L3_error)
-    __pyx_v_sampleFreq = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_sampleFreq == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 110, __pyx_L3_error)
+    __pyx_v_beta = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_beta == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L3_error)
+    __pyx_v_sampleFreq = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_sampleFreq == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 104, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("madgwickIMU", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 106, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5303,9 +5303,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_acc), __pyx_ptype_5numpy_ndarray, 1, "acc", 0))) __PYX_ERR(0, 106, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_gyr), __pyx_ptype_5numpy_ndarray, 1, "gyr", 0))) __PYX_ERR(0, 107, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quat0), __pyx_ptype_5numpy_ndarray, 1, "quat0", 0))) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_acc), __pyx_ptype_5numpy_ndarray, 1, "acc", 0))) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_gyr), __pyx_ptype_5numpy_ndarray, 1, "gyr", 0))) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quat0), __pyx_ptype_5numpy_ndarray, 1, "quat0", 0))) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_r = __pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(__pyx_self, __pyx_v_acc, __pyx_v_gyr, __pyx_v_quat0, __pyx_v_beta, __pyx_v_sampleFreq);
 
   /* function exit code */
@@ -5371,87 +5371,87 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(CYTHON_UNUSED PyOb
   __pyx_pybuffernd_quat0.rcbuffer = &__pyx_pybuffer_quat0;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_acc.rcbuffer->pybuffer, (PyObject*)__pyx_v_acc, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_acc.rcbuffer->pybuffer, (PyObject*)__pyx_v_acc, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 106, __pyx_L1_error)
   }
   __pyx_pybuffernd_acc.diminfo[0].strides = __pyx_pybuffernd_acc.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_acc.diminfo[0].shape = __pyx_pybuffernd_acc.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_acc.diminfo[1].strides = __pyx_pybuffernd_acc.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_acc.diminfo[1].shape = __pyx_pybuffernd_acc.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyr.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyr, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyr.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyr, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 106, __pyx_L1_error)
   }
   __pyx_pybuffernd_gyr.diminfo[0].strides = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_gyr.diminfo[0].shape = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_gyr.diminfo[1].strides = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_gyr.diminfo[1].shape = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat0.rcbuffer->pybuffer, (PyObject*)__pyx_v_quat0, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat0.rcbuffer->pybuffer, (PyObject*)__pyx_v_quat0, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 106, __pyx_L1_error)
   }
   __pyx_pybuffernd_quat0.diminfo[0].strides = __pyx_pybuffernd_quat0.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quat0.diminfo[0].shape = __pyx_pybuffernd_quat0.rcbuffer->pybuffer.shape[0];
 
-  /* "ahrs_cython/madgwick.pyx":111
- *                                 double beta,
- *                                 double sampleFreq):
- *     cdef int n_row    = acc.shape[0]             # <<<<<<<<<<<<<<
+  /* "ahrs_cython/madgwick.pyx":113
+ *                 double beta,
+ *                 double sampleFreq):
+ *     cdef int n_row = acc.shape[0]             # <<<<<<<<<<<<<<
  *     cdef int row = 0
  *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
  */
-  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_acc)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_acc)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 113, __pyx_L1_error)
   __pyx_v_n_row = (__pyx_t_1[0]);
 
-  /* "ahrs_cython/madgwick.pyx":112
- *                                 double sampleFreq):
- *     cdef int n_row    = acc.shape[0]
+  /* "ahrs_cython/madgwick.pyx":114
+ *                 double sampleFreq):
+ *     cdef int n_row = acc.shape[0]
  *     cdef int row = 0             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
  *     quat[0,:] = quat0
  */
   __pyx_v_row = 0;
 
-  /* "ahrs_cython/madgwick.pyx":113
- *     cdef int n_row    = acc.shape[0]
+  /* "ahrs_cython/madgwick.pyx":115
+ *     cdef int n_row = acc.shape[0]
  *     cdef int row = 0
  *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     quat[0,:] = quat0
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_n_row + 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_n_row + 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_4);
   __Pyx_GIVEREF(__pyx_int_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_int_4)) __PYX_ERR(0, 113, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_int_4)) __PYX_ERR(0, 115, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 115, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 113, __pyx_L1_error)
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 115, __pyx_L1_error)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_6);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_quat = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_quat.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 113, __pyx_L1_error)
+      __PYX_ERR(0, 115, __pyx_L1_error)
     } else {__pyx_pybuffernd_quat.diminfo[0].strides = __pyx_pybuffernd_quat.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quat.diminfo[0].shape = __pyx_pybuffernd_quat.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_quat.diminfo[1].strides = __pyx_pybuffernd_quat.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_quat.diminfo[1].shape = __pyx_pybuffernd_quat.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -5459,16 +5459,16 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(CYTHON_UNUSED PyOb
   __pyx_v_quat = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "ahrs_cython/madgwick.pyx":114
+  /* "ahrs_cython/madgwick.pyx":116
  *     cdef int row = 0
  *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
  *     quat[0,:] = quat0             # <<<<<<<<<<<<<<
  * 
  *     for row in range(n_row):
  */
-  if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_quat), __pyx_tuple__4, ((PyObject *)__pyx_v_quat0)) < 0))) __PYX_ERR(0, 114, __pyx_L1_error)
+  if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_quat), __pyx_tuple__4, ((PyObject *)__pyx_v_quat0)) < 0))) __PYX_ERR(0, 116, __pyx_L1_error)
 
-  /* "ahrs_cython/madgwick.pyx":116
+  /* "ahrs_cython/madgwick.pyx":118
  *     quat[0,:] = quat0
  * 
  *     for row in range(n_row):             # <<<<<<<<<<<<<<
@@ -5480,42 +5480,42 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(CYTHON_UNUSED PyOb
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_row = __pyx_t_10;
 
-    /* "ahrs_cython/madgwick.pyx":117
+    /* "ahrs_cython/madgwick.pyx":119
  * 
  *     for row in range(n_row):
  *         quatStep = quat[row]             # <<<<<<<<<<<<<<
  *         quat[row+1] = madgwickIMUStep(acc[row], gyr[row], quatStep, beta, sampleFreq)
  * 
  */
-    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_quat), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 117, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_quat), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 119, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_XDECREF_SET(__pyx_v_quatStep, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ahrs_cython/madgwick.pyx":118
+    /* "ahrs_cython/madgwick.pyx":120
  *     for row in range(n_row):
  *         quatStep = quat[row]
  *         quat[row+1] = madgwickIMUStep(acc[row], gyr[row], quatStep, beta, sampleFreq)             # <<<<<<<<<<<<<<
  * 
  *     return(quat)
  */
-    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_acc), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 118, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_acc), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 120, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 118, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_gyr), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 118, __pyx_L1_error)
+    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 120, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_gyr), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 118, __pyx_L1_error)
-    if (!(likely(((__pyx_v_quatStep) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_quatStep, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 118, __pyx_L1_error)
-    __pyx_t_2 = __pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(((PyArrayObject *)__pyx_t_6), ((PyArrayObject *)__pyx_t_4), ((PyArrayObject *)__pyx_v_quatStep), __pyx_v_beta, __pyx_v_sampleFreq); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
+    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 120, __pyx_L1_error)
+    if (!(likely(((__pyx_v_quatStep) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_quatStep, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 120, __pyx_L1_error)
+    __pyx_t_2 = __pyx_f_11ahrs_cython_8madgwick_madgwickIMUStep(((PyArrayObject *)__pyx_t_6), ((PyArrayObject *)__pyx_t_4), ((PyArrayObject *)__pyx_v_quatStep), __pyx_v_beta, __pyx_v_sampleFreq); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_11 = (__pyx_v_row + 1);
-    if (unlikely((__Pyx_SetItemInt(((PyObject *)__pyx_v_quat), __pyx_t_11, __pyx_t_2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0) < 0))) __PYX_ERR(0, 118, __pyx_L1_error)
+    if (unlikely((__Pyx_SetItemInt(((PyObject *)__pyx_v_quat), __pyx_t_11, __pyx_t_2, long, 1, __Pyx_PyInt_From_long, 0, 0, 0) < 0))) __PYX_ERR(0, 120, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "ahrs_cython/madgwick.pyx":120
+  /* "ahrs_cython/madgwick.pyx":122
  *         quat[row+1] = madgwickIMUStep(acc[row], gyr[row], quatStep, beta, sampleFreq)
  * 
  *     return(quat)             # <<<<<<<<<<<<<<
@@ -5527,8 +5527,8 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(CYTHON_UNUSED PyOb
   __pyx_r = ((PyObject *)__pyx_v_quat);
   goto __pyx_L0;
 
-  /* "ahrs_cython/madgwick.pyx":104
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":106
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
@@ -5567,12 +5567,12 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_madgwickIMU(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ahrs_cython/madgwick.pyx":125
- * #                                             Madgwick AHRS
+/* "ahrs_cython/madgwick.pyx":127
+ * #                Madgwick AHRS
  * # -------------------------------------------------------
  * cdef gradientMadgwickAHRS(double q0, double q1, double q2, double q3,             # <<<<<<<<<<<<<<
- *                                                     double ax, double ay, double az,
- *                                                     double mx, double my, double mz):
+ *                           double ax, double ay, double az,
+ *                           double mx, double my, double mz):
  */
 
 static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __pyx_v_q0, double __pyx_v_q1, double __pyx_v_q2, double __pyx_v_q3, double __pyx_v_ax, double __pyx_v_ay, double __pyx_v_az, double __pyx_v_mx, double __pyx_v_my, double __pyx_v_mz) {
@@ -5620,7 +5620,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("gradientMadgwickAHRS", 1);
 
-  /* "ahrs_cython/madgwick.pyx":137
+  /* "ahrs_cython/madgwick.pyx":139
  * 
  *     # Auxiliary variables to avoid repeated arithmetic
  *     _2q0mx = 2.0 * q0 * mx             # <<<<<<<<<<<<<<
@@ -5629,7 +5629,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q0mx = ((2.0 * __pyx_v_q0) * __pyx_v_mx);
 
-  /* "ahrs_cython/madgwick.pyx":138
+  /* "ahrs_cython/madgwick.pyx":140
  *     # Auxiliary variables to avoid repeated arithmetic
  *     _2q0mx = 2.0 * q0 * mx
  *     _2q0my = 2.0 * q0 * my             # <<<<<<<<<<<<<<
@@ -5638,7 +5638,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q0my = ((2.0 * __pyx_v_q0) * __pyx_v_my);
 
-  /* "ahrs_cython/madgwick.pyx":139
+  /* "ahrs_cython/madgwick.pyx":141
  *     _2q0mx = 2.0 * q0 * mx
  *     _2q0my = 2.0 * q0 * my
  *     _2q0mz = 2.0 * q0 * mz             # <<<<<<<<<<<<<<
@@ -5647,7 +5647,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q0mz = ((2.0 * __pyx_v_q0) * __pyx_v_mz);
 
-  /* "ahrs_cython/madgwick.pyx":140
+  /* "ahrs_cython/madgwick.pyx":142
  *     _2q0my = 2.0 * q0 * my
  *     _2q0mz = 2.0 * q0 * mz
  *     _2q1mx = 2.0 * q1 * mx             # <<<<<<<<<<<<<<
@@ -5656,7 +5656,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q1mx = ((2.0 * __pyx_v_q1) * __pyx_v_mx);
 
-  /* "ahrs_cython/madgwick.pyx":141
+  /* "ahrs_cython/madgwick.pyx":143
  *     _2q0mz = 2.0 * q0 * mz
  *     _2q1mx = 2.0 * q1 * mx
  *     _2q0 = 2.0 * q0             # <<<<<<<<<<<<<<
@@ -5665,7 +5665,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q0 = (2.0 * __pyx_v_q0);
 
-  /* "ahrs_cython/madgwick.pyx":142
+  /* "ahrs_cython/madgwick.pyx":144
  *     _2q1mx = 2.0 * q1 * mx
  *     _2q0 = 2.0 * q0
  *     _2q1 = 2.0 * q1             # <<<<<<<<<<<<<<
@@ -5674,7 +5674,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q1 = (2.0 * __pyx_v_q1);
 
-  /* "ahrs_cython/madgwick.pyx":143
+  /* "ahrs_cython/madgwick.pyx":145
  *     _2q0 = 2.0 * q0
  *     _2q1 = 2.0 * q1
  *     _2q2 = 2.0 * q2             # <<<<<<<<<<<<<<
@@ -5683,7 +5683,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q2 = (2.0 * __pyx_v_q2);
 
-  /* "ahrs_cython/madgwick.pyx":144
+  /* "ahrs_cython/madgwick.pyx":146
  *     _2q1 = 2.0 * q1
  *     _2q2 = 2.0 * q2
  *     _2q3 = 2.0 * q3             # <<<<<<<<<<<<<<
@@ -5692,7 +5692,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q3 = (2.0 * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":145
+  /* "ahrs_cython/madgwick.pyx":147
  *     _2q2 = 2.0 * q2
  *     _2q3 = 2.0 * q3
  *     _2q0q2 = 2.0 * q0 * q2             # <<<<<<<<<<<<<<
@@ -5701,7 +5701,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q0q2 = ((2.0 * __pyx_v_q0) * __pyx_v_q2);
 
-  /* "ahrs_cython/madgwick.pyx":146
+  /* "ahrs_cython/madgwick.pyx":148
  *     _2q3 = 2.0 * q3
  *     _2q0q2 = 2.0 * q0 * q2
  *     _2q2q3 = 2.0 * q2 * q3             # <<<<<<<<<<<<<<
@@ -5710,7 +5710,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2q2q3 = ((2.0 * __pyx_v_q2) * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":147
+  /* "ahrs_cython/madgwick.pyx":149
  *     _2q0q2 = 2.0 * q0 * q2
  *     _2q2q3 = 2.0 * q2 * q3
  *     q0q0 = q0 * q0             # <<<<<<<<<<<<<<
@@ -5719,7 +5719,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q0q0 = (__pyx_v_q0 * __pyx_v_q0);
 
-  /* "ahrs_cython/madgwick.pyx":148
+  /* "ahrs_cython/madgwick.pyx":150
  *     _2q2q3 = 2.0 * q2 * q3
  *     q0q0 = q0 * q0
  *     q0q1 = q0 * q1             # <<<<<<<<<<<<<<
@@ -5728,7 +5728,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q0q1 = (__pyx_v_q0 * __pyx_v_q1);
 
-  /* "ahrs_cython/madgwick.pyx":149
+  /* "ahrs_cython/madgwick.pyx":151
  *     q0q0 = q0 * q0
  *     q0q1 = q0 * q1
  *     q0q2 = q0 * q2             # <<<<<<<<<<<<<<
@@ -5737,7 +5737,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q0q2 = (__pyx_v_q0 * __pyx_v_q2);
 
-  /* "ahrs_cython/madgwick.pyx":150
+  /* "ahrs_cython/madgwick.pyx":152
  *     q0q1 = q0 * q1
  *     q0q2 = q0 * q2
  *     q0q3 = q0 * q3             # <<<<<<<<<<<<<<
@@ -5746,7 +5746,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q0q3 = (__pyx_v_q0 * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":151
+  /* "ahrs_cython/madgwick.pyx":153
  *     q0q2 = q0 * q2
  *     q0q3 = q0 * q3
  *     q1q1 = q1 * q1             # <<<<<<<<<<<<<<
@@ -5755,7 +5755,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q1q1 = (__pyx_v_q1 * __pyx_v_q1);
 
-  /* "ahrs_cython/madgwick.pyx":152
+  /* "ahrs_cython/madgwick.pyx":154
  *     q0q3 = q0 * q3
  *     q1q1 = q1 * q1
  *     q1q2 = q1 * q2             # <<<<<<<<<<<<<<
@@ -5764,7 +5764,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q1q2 = (__pyx_v_q1 * __pyx_v_q2);
 
-  /* "ahrs_cython/madgwick.pyx":153
+  /* "ahrs_cython/madgwick.pyx":155
  *     q1q1 = q1 * q1
  *     q1q2 = q1 * q2
  *     q1q3 = q1 * q3             # <<<<<<<<<<<<<<
@@ -5773,7 +5773,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q1q3 = (__pyx_v_q1 * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":154
+  /* "ahrs_cython/madgwick.pyx":156
  *     q1q2 = q1 * q2
  *     q1q3 = q1 * q3
  *     q2q2 = q2 * q2             # <<<<<<<<<<<<<<
@@ -5782,7 +5782,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q2q2 = (__pyx_v_q2 * __pyx_v_q2);
 
-  /* "ahrs_cython/madgwick.pyx":155
+  /* "ahrs_cython/madgwick.pyx":157
  *     q1q3 = q1 * q3
  *     q2q2 = q2 * q2
  *     q2q3 = q2 * q3             # <<<<<<<<<<<<<<
@@ -5791,7 +5791,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q2q3 = (__pyx_v_q2 * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":156
+  /* "ahrs_cython/madgwick.pyx":158
  *     q2q2 = q2 * q2
  *     q2q3 = q2 * q3
  *     q3q3 = q3 * q3             # <<<<<<<<<<<<<<
@@ -5800,7 +5800,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_q3q3 = (__pyx_v_q3 * __pyx_v_q3);
 
-  /* "ahrs_cython/madgwick.pyx":159
+  /* "ahrs_cython/madgwick.pyx":161
  * 
  *     # Reference direction of Earth's magnetic field
  *     hx = mx * q0q0 - _2q0my * q3 + _2q0mz * q2 + mx * q1q1 + _2q1 * my * q2 + _2q1 * mz * q3 - mx * q2q2 - mx * q3q3             # <<<<<<<<<<<<<<
@@ -5809,7 +5809,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_hx = ((((((((__pyx_v_mx * __pyx_v_q0q0) - (__pyx_v__2q0my * __pyx_v_q3)) + (__pyx_v__2q0mz * __pyx_v_q2)) + (__pyx_v_mx * __pyx_v_q1q1)) + ((__pyx_v__2q1 * __pyx_v_my) * __pyx_v_q2)) + ((__pyx_v__2q1 * __pyx_v_mz) * __pyx_v_q3)) - (__pyx_v_mx * __pyx_v_q2q2)) - (__pyx_v_mx * __pyx_v_q3q3));
 
-  /* "ahrs_cython/madgwick.pyx":160
+  /* "ahrs_cython/madgwick.pyx":162
  *     # Reference direction of Earth's magnetic field
  *     hx = mx * q0q0 - _2q0my * q3 + _2q0mz * q2 + mx * q1q1 + _2q1 * my * q2 + _2q1 * mz * q3 - mx * q2q2 - mx * q3q3
  *     hy = _2q0mx * q3 + my * q0q0 - _2q0mz * q1 + _2q1mx * q2 - my * q1q1 + my * q2q2 + _2q2 * mz * q3 - my * q3q3             # <<<<<<<<<<<<<<
@@ -5818,7 +5818,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_hy = ((((((((__pyx_v__2q0mx * __pyx_v_q3) + (__pyx_v_my * __pyx_v_q0q0)) - (__pyx_v__2q0mz * __pyx_v_q1)) + (__pyx_v__2q1mx * __pyx_v_q2)) - (__pyx_v_my * __pyx_v_q1q1)) + (__pyx_v_my * __pyx_v_q2q2)) + ((__pyx_v__2q2 * __pyx_v_mz) * __pyx_v_q3)) - (__pyx_v_my * __pyx_v_q3q3));
 
-  /* "ahrs_cython/madgwick.pyx":161
+  /* "ahrs_cython/madgwick.pyx":163
  *     hx = mx * q0q0 - _2q0my * q3 + _2q0mz * q2 + mx * q1q1 + _2q1 * my * q2 + _2q1 * mz * q3 - mx * q2q2 - mx * q3q3
  *     hy = _2q0mx * q3 + my * q0q0 - _2q0mz * q1 + _2q1mx * q2 - my * q1q1 + my * q2q2 + _2q2 * mz * q3 - my * q3q3
  *     _2bx = sqrt(hx * hx + hy * hy)             # <<<<<<<<<<<<<<
@@ -5827,7 +5827,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2bx = sqrt(((__pyx_v_hx * __pyx_v_hx) + (__pyx_v_hy * __pyx_v_hy)));
 
-  /* "ahrs_cython/madgwick.pyx":162
+  /* "ahrs_cython/madgwick.pyx":164
  *     hy = _2q0mx * q3 + my * q0q0 - _2q0mz * q1 + _2q1mx * q2 - my * q1q1 + my * q2q2 + _2q2 * mz * q3 - my * q3q3
  *     _2bx = sqrt(hx * hx + hy * hy)
  *     _2bz = -_2q0mx * q2 + _2q0my * q1 + mz * q0q0 + _2q1mx * q3 - mz * q1q1 + _2q2 * my * q3 - mz * q2q2 + mz * q3q3             # <<<<<<<<<<<<<<
@@ -5836,7 +5836,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__2bz = (((((((((-__pyx_v__2q0mx) * __pyx_v_q2) + (__pyx_v__2q0my * __pyx_v_q1)) + (__pyx_v_mz * __pyx_v_q0q0)) + (__pyx_v__2q1mx * __pyx_v_q3)) - (__pyx_v_mz * __pyx_v_q1q1)) + ((__pyx_v__2q2 * __pyx_v_my) * __pyx_v_q3)) - (__pyx_v_mz * __pyx_v_q2q2)) + (__pyx_v_mz * __pyx_v_q3q3));
 
-  /* "ahrs_cython/madgwick.pyx":163
+  /* "ahrs_cython/madgwick.pyx":165
  *     _2bx = sqrt(hx * hx + hy * hy)
  *     _2bz = -_2q0mx * q2 + _2q0my * q1 + mz * q0q0 + _2q1mx * q3 - mz * q1q1 + _2q2 * my * q3 - mz * q2q2 + mz * q3q3
  *     _4bx = 2.0 * _2bx             # <<<<<<<<<<<<<<
@@ -5845,7 +5845,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__4bx = (2.0 * __pyx_v__2bx);
 
-  /* "ahrs_cython/madgwick.pyx":164
+  /* "ahrs_cython/madgwick.pyx":166
  *     _2bz = -_2q0mx * q2 + _2q0my * q1 + mz * q0q0 + _2q1mx * q3 - mz * q1q1 + _2q2 * my * q3 - mz * q2q2 + mz * q3q3
  *     _4bx = 2.0 * _2bx
  *     _4bz = 2.0 * _2bz             # <<<<<<<<<<<<<<
@@ -5854,7 +5854,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v__4bz = (2.0 * __pyx_v__2bz);
 
-  /* "ahrs_cython/madgwick.pyx":167
+  /* "ahrs_cython/madgwick.pyx":169
  * 
  *     # Gradient decent algorithm corrective step
  *     s0 = -_2q2 * (2.0 * q1q3 - _2q0q2 - ax) + _2q1 * (2.0 * q0q1 + _2q2q3 - ay) - _2bz * q2 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * q3 + _2bz * q1) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * q2 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)             # <<<<<<<<<<<<<<
@@ -5863,7 +5863,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s0 = ((((((-__pyx_v__2q2) * (((2.0 * __pyx_v_q1q3) - __pyx_v__2q0q2) - __pyx_v_ax)) + (__pyx_v__2q1 * (((2.0 * __pyx_v_q0q1) + __pyx_v__2q2q3) - __pyx_v_ay))) - ((__pyx_v__2bz * __pyx_v_q2) * (((__pyx_v__2bx * ((0.5 - __pyx_v_q2q2) - __pyx_v_q3q3)) + (__pyx_v__2bz * (__pyx_v_q1q3 - __pyx_v_q0q2))) - __pyx_v_mx))) + ((((-__pyx_v__2bx) * __pyx_v_q3) + (__pyx_v__2bz * __pyx_v_q1)) * (((__pyx_v__2bx * (__pyx_v_q1q2 - __pyx_v_q0q3)) + (__pyx_v__2bz * (__pyx_v_q0q1 + __pyx_v_q2q3))) - __pyx_v_my))) + ((__pyx_v__2bx * __pyx_v_q2) * (((__pyx_v__2bx * (__pyx_v_q0q2 + __pyx_v_q1q3)) + (__pyx_v__2bz * ((0.5 - __pyx_v_q1q1) - __pyx_v_q2q2))) - __pyx_v_mz)));
 
-  /* "ahrs_cython/madgwick.pyx":168
+  /* "ahrs_cython/madgwick.pyx":170
  *     # Gradient decent algorithm corrective step
  *     s0 = -_2q2 * (2.0 * q1q3 - _2q0q2 - ax) + _2q1 * (2.0 * q0q1 + _2q2q3 - ay) - _2bz * q2 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * q3 + _2bz * q1) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * q2 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)
  *     s1 = _2q3 * (2.0 * q1q3 - _2q0q2 - ax) + _2q0 * (2.0 * q0q1 + _2q2q3 - ay) - 4.0 * q1 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + _2bz * q3 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * q2 + _2bz * q0) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * q3 - _4bz * q1) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)             # <<<<<<<<<<<<<<
@@ -5872,7 +5872,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s1 = ((((((__pyx_v__2q3 * (((2.0 * __pyx_v_q1q3) - __pyx_v__2q0q2) - __pyx_v_ax)) + (__pyx_v__2q0 * (((2.0 * __pyx_v_q0q1) + __pyx_v__2q2q3) - __pyx_v_ay))) - ((4.0 * __pyx_v_q1) * (((1.0 - (2.0 * __pyx_v_q1q1)) - (2.0 * __pyx_v_q2q2)) - __pyx_v_az))) + ((__pyx_v__2bz * __pyx_v_q3) * (((__pyx_v__2bx * ((0.5 - __pyx_v_q2q2) - __pyx_v_q3q3)) + (__pyx_v__2bz * (__pyx_v_q1q3 - __pyx_v_q0q2))) - __pyx_v_mx))) + (((__pyx_v__2bx * __pyx_v_q2) + (__pyx_v__2bz * __pyx_v_q0)) * (((__pyx_v__2bx * (__pyx_v_q1q2 - __pyx_v_q0q3)) + (__pyx_v__2bz * (__pyx_v_q0q1 + __pyx_v_q2q3))) - __pyx_v_my))) + (((__pyx_v__2bx * __pyx_v_q3) - (__pyx_v__4bz * __pyx_v_q1)) * (((__pyx_v__2bx * (__pyx_v_q0q2 + __pyx_v_q1q3)) + (__pyx_v__2bz * ((0.5 - __pyx_v_q1q1) - __pyx_v_q2q2))) - __pyx_v_mz)));
 
-  /* "ahrs_cython/madgwick.pyx":169
+  /* "ahrs_cython/madgwick.pyx":171
  *     s0 = -_2q2 * (2.0 * q1q3 - _2q0q2 - ax) + _2q1 * (2.0 * q0q1 + _2q2q3 - ay) - _2bz * q2 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * q3 + _2bz * q1) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * q2 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)
  *     s1 = _2q3 * (2.0 * q1q3 - _2q0q2 - ax) + _2q0 * (2.0 * q0q1 + _2q2q3 - ay) - 4.0 * q1 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + _2bz * q3 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * q2 + _2bz * q0) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * q3 - _4bz * q1) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)
  *     s2 = -_2q0 * (2.0 * q1q3 - _2q0q2 - ax) + _2q3 * (2.0 * q0q1 + _2q2q3 - ay) - 4.0 * q2 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + (-_4bx * q2 - _2bz * q0) * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * q1 + _2bz * q3) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * q0 - _4bz * q2) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)             # <<<<<<<<<<<<<<
@@ -5881,7 +5881,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s2 = (((((((-__pyx_v__2q0) * (((2.0 * __pyx_v_q1q3) - __pyx_v__2q0q2) - __pyx_v_ax)) + (__pyx_v__2q3 * (((2.0 * __pyx_v_q0q1) + __pyx_v__2q2q3) - __pyx_v_ay))) - ((4.0 * __pyx_v_q2) * (((1.0 - (2.0 * __pyx_v_q1q1)) - (2.0 * __pyx_v_q2q2)) - __pyx_v_az))) + ((((-__pyx_v__4bx) * __pyx_v_q2) - (__pyx_v__2bz * __pyx_v_q0)) * (((__pyx_v__2bx * ((0.5 - __pyx_v_q2q2) - __pyx_v_q3q3)) + (__pyx_v__2bz * (__pyx_v_q1q3 - __pyx_v_q0q2))) - __pyx_v_mx))) + (((__pyx_v__2bx * __pyx_v_q1) + (__pyx_v__2bz * __pyx_v_q3)) * (((__pyx_v__2bx * (__pyx_v_q1q2 - __pyx_v_q0q3)) + (__pyx_v__2bz * (__pyx_v_q0q1 + __pyx_v_q2q3))) - __pyx_v_my))) + (((__pyx_v__2bx * __pyx_v_q0) - (__pyx_v__4bz * __pyx_v_q2)) * (((__pyx_v__2bx * (__pyx_v_q0q2 + __pyx_v_q1q3)) + (__pyx_v__2bz * ((0.5 - __pyx_v_q1q1) - __pyx_v_q2q2))) - __pyx_v_mz)));
 
-  /* "ahrs_cython/madgwick.pyx":170
+  /* "ahrs_cython/madgwick.pyx":172
  *     s1 = _2q3 * (2.0 * q1q3 - _2q0q2 - ax) + _2q0 * (2.0 * q0q1 + _2q2q3 - ay) - 4.0 * q1 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + _2bz * q3 * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * q2 + _2bz * q0) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * q3 - _4bz * q1) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)
  *     s2 = -_2q0 * (2.0 * q1q3 - _2q0q2 - ax) + _2q3 * (2.0 * q0q1 + _2q2q3 - ay) - 4.0 * q2 * (1 - 2.0 * q1q1 - 2.0 * q2q2 - az) + (-_4bx * q2 - _2bz * q0) * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * q1 + _2bz * q3) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * q0 - _4bz * q2) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)
  *     s3 = _2q1 * (2.0 * q1q3 - _2q0q2 - ax) + _2q2 * (2.0 * q0q1 + _2q2q3 - ay) + (-_4bx * q3 + _2bz * q1) * (_2bx * (0.5 - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * q0 + _2bz * q2) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * q1 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5 - q1q1 - q2q2) - mz)             # <<<<<<<<<<<<<<
@@ -5890,7 +5890,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s3 = (((((__pyx_v__2q1 * (((2.0 * __pyx_v_q1q3) - __pyx_v__2q0q2) - __pyx_v_ax)) + (__pyx_v__2q2 * (((2.0 * __pyx_v_q0q1) + __pyx_v__2q2q3) - __pyx_v_ay))) + ((((-__pyx_v__4bx) * __pyx_v_q3) + (__pyx_v__2bz * __pyx_v_q1)) * (((__pyx_v__2bx * ((0.5 - __pyx_v_q2q2) - __pyx_v_q3q3)) + (__pyx_v__2bz * (__pyx_v_q1q3 - __pyx_v_q0q2))) - __pyx_v_mx))) + ((((-__pyx_v__2bx) * __pyx_v_q0) + (__pyx_v__2bz * __pyx_v_q2)) * (((__pyx_v__2bx * (__pyx_v_q1q2 - __pyx_v_q0q3)) + (__pyx_v__2bz * (__pyx_v_q0q1 + __pyx_v_q2q3))) - __pyx_v_my))) + ((__pyx_v__2bx * __pyx_v_q1) * (((__pyx_v__2bx * (__pyx_v_q0q2 + __pyx_v_q1q3)) + (__pyx_v__2bz * ((0.5 - __pyx_v_q1q1) - __pyx_v_q2q2))) - __pyx_v_mz)));
 
-  /* "ahrs_cython/madgwick.pyx":173
+  /* "ahrs_cython/madgwick.pyx":175
  * 
  *     # normalise step magnitude and return step
  *     recipNorm = 1.0/sqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3)             # <<<<<<<<<<<<<<
@@ -5900,11 +5900,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
   __pyx_t_1 = sqrt(((((__pyx_v_s0 * __pyx_v_s0) + (__pyx_v_s1 * __pyx_v_s1)) + (__pyx_v_s2 * __pyx_v_s2)) + (__pyx_v_s3 * __pyx_v_s3)));
   if (unlikely(__pyx_t_1 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 173, __pyx_L1_error)
+    __PYX_ERR(0, 175, __pyx_L1_error)
   }
   __pyx_v_recipNorm = (1.0 / __pyx_t_1);
 
-  /* "ahrs_cython/madgwick.pyx":174
+  /* "ahrs_cython/madgwick.pyx":176
  *     # normalise step magnitude and return step
  *     recipNorm = 1.0/sqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3)
  *     s0 *= recipNorm             # <<<<<<<<<<<<<<
@@ -5913,7 +5913,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s0 = (__pyx_v_s0 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":175
+  /* "ahrs_cython/madgwick.pyx":177
  *     recipNorm = 1.0/sqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3)
  *     s0 *= recipNorm
  *     s1 *= recipNorm             # <<<<<<<<<<<<<<
@@ -5922,7 +5922,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s1 = (__pyx_v_s1 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":176
+  /* "ahrs_cython/madgwick.pyx":178
  *     s0 *= recipNorm
  *     s1 *= recipNorm
  *     s2 *= recipNorm             # <<<<<<<<<<<<<<
@@ -5931,7 +5931,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s2 = (__pyx_v_s2 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":177
+  /* "ahrs_cython/madgwick.pyx":179
  *     s1 *= recipNorm
  *     s2 *= recipNorm
  *     s3 *= recipNorm             # <<<<<<<<<<<<<<
@@ -5940,32 +5940,32 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
  */
   __pyx_v_s3 = (__pyx_v_s3 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":178
+  /* "ahrs_cython/madgwick.pyx":180
  *     s2 *= recipNorm
  *     s3 *= recipNorm
  *     return(s0, s1, s2, s3)             # <<<<<<<<<<<<<<
  * 
- * @cython.boundscheck(False)
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_s0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_s1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_s3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_s3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyTuple_New(4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 3, __pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 3, __pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
@@ -5974,12 +5974,12 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "ahrs_cython/madgwick.pyx":125
- * #                                             Madgwick AHRS
+  /* "ahrs_cython/madgwick.pyx":127
+ * #                Madgwick AHRS
  * # -------------------------------------------------------
  * cdef gradientMadgwickAHRS(double q0, double q1, double q2, double q3,             # <<<<<<<<<<<<<<
- *                                                     double ax, double ay, double az,
- *                                                     double mx, double my, double mz):
+ *                           double ax, double ay, double az,
+ *                           double mx, double my, double mz):
  */
 
   /* function exit code */
@@ -5997,12 +5997,12 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(double __p
   return __pyx_r;
 }
 
-/* "ahrs_cython/madgwick.pyx":182
+/* "ahrs_cython/madgwick.pyx":185
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef madgwickAHRSStep(np.ndarray[DTYPE_t, ndim=1] accStep,             # <<<<<<<<<<<<<<
- *                                             np.ndarray[DTYPE_t, ndim=1] gyrStep,
- *                                             np.ndarray[DTYPE_t, ndim=1] magStep,
+ *                       np.ndarray[DTYPE_t, ndim=1] gyrStep,
+ *                       np.ndarray[DTYPE_t, ndim=1] magStep,
  */
 
 static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject *__pyx_v_accStep, PyArrayObject *__pyx_v_gyrStep, PyArrayObject *__pyx_v_magStep, PyArrayObject *__pyx_v_quatStep, double __pyx_v_beta, double __pyx_v_sampleFreq) {
@@ -6078,26 +6078,26 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_pybuffernd_quatStep.rcbuffer = &__pyx_pybuffer_quatStep;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_accStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_accStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 185, __pyx_L1_error)
   }
   __pyx_pybuffernd_accStep.diminfo[0].strides = __pyx_pybuffernd_accStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_accStep.diminfo[0].shape = __pyx_pybuffernd_accStep.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyrStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyrStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyrStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyrStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 185, __pyx_L1_error)
   }
   __pyx_pybuffernd_gyrStep.diminfo[0].strides = __pyx_pybuffernd_gyrStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_gyrStep.diminfo[0].shape = __pyx_pybuffernd_gyrStep.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_magStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_magStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_magStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_magStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 185, __pyx_L1_error)
   }
   __pyx_pybuffernd_magStep.diminfo[0].strides = __pyx_pybuffernd_magStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_magStep.diminfo[0].shape = __pyx_pybuffernd_magStep.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quatStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_quatStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quatStep.rcbuffer->pybuffer, (PyObject*)__pyx_v_quatStep, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 185, __pyx_L1_error)
   }
   __pyx_pybuffernd_quatStep.diminfo[0].strides = __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quatStep.diminfo[0].shape = __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.shape[0];
 
-  /* "ahrs_cython/madgwick.pyx":194
+  /* "ahrs_cython/madgwick.pyx":197
  * 
  *     # Grab acc, gyr, mag and quat values
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]             # <<<<<<<<<<<<<<
@@ -6114,7 +6114,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_v_gy = __pyx_t_3;
   __pyx_v_gz = __pyx_t_4;
 
-  /* "ahrs_cython/madgwick.pyx":195
+  /* "ahrs_cython/madgwick.pyx":198
  *     # Grab acc, gyr, mag and quat values
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]
  *     ax, ay, az = accStep[0], accStep[1], accStep[2]             # <<<<<<<<<<<<<<
@@ -6131,7 +6131,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_v_ay = __pyx_t_3;
   __pyx_v_az = __pyx_t_2;
 
-  /* "ahrs_cython/madgwick.pyx":196
+  /* "ahrs_cython/madgwick.pyx":199
  *     gx, gy, gz = gyrStep[0], gyrStep[1], gyrStep[2]
  *     ax, ay, az = accStep[0], accStep[1], accStep[2]
  *     mx, my, mz = magStep[0], magStep[1], magStep[2]             # <<<<<<<<<<<<<<
@@ -6148,7 +6148,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_v_my = __pyx_t_3;
   __pyx_v_mz = __pyx_t_4;
 
-  /* "ahrs_cython/madgwick.pyx":197
+  /* "ahrs_cython/madgwick.pyx":200
  *     ax, ay, az = accStep[0], accStep[1], accStep[2]
  *     mx, my, mz = magStep[0], magStep[1], magStep[2]
  *     q0, q1, q2, q3 = quatStep[0], quatStep[1], quatStep[2], quatStep[3]             # <<<<<<<<<<<<<<
@@ -6168,7 +6168,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_v_q2 = __pyx_t_2;
   __pyx_v_q3 = __pyx_t_5;
 
-  /* "ahrs_cython/madgwick.pyx":200
+  /* "ahrs_cython/madgwick.pyx":203
  * 
  *     # Rate of change of quaternion from gyroscope
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)             # <<<<<<<<<<<<<<
@@ -6177,7 +6177,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   __pyx_v_qDot1 = (0.5 * ((((-__pyx_v_q1) * __pyx_v_gx) - (__pyx_v_q2 * __pyx_v_gy)) - (__pyx_v_q3 * __pyx_v_gz)));
 
-  /* "ahrs_cython/madgwick.pyx":201
+  /* "ahrs_cython/madgwick.pyx":204
  *     # Rate of change of quaternion from gyroscope
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)             # <<<<<<<<<<<<<<
@@ -6186,7 +6186,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   __pyx_v_qDot2 = (0.5 * (((__pyx_v_q0 * __pyx_v_gx) + (__pyx_v_q2 * __pyx_v_gz)) - (__pyx_v_q3 * __pyx_v_gy)));
 
-  /* "ahrs_cython/madgwick.pyx":202
+  /* "ahrs_cython/madgwick.pyx":205
  *     qDot1 = 0.5 * (-q1 * gx - q2 * gy - q3 * gz)
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)
  *     qDot3 = 0.5 * (q0 * gy - q1 * gz + q3 * gx)             # <<<<<<<<<<<<<<
@@ -6195,7 +6195,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   __pyx_v_qDot3 = (0.5 * (((__pyx_v_q0 * __pyx_v_gy) - (__pyx_v_q1 * __pyx_v_gz)) + (__pyx_v_q3 * __pyx_v_gx)));
 
-  /* "ahrs_cython/madgwick.pyx":203
+  /* "ahrs_cython/madgwick.pyx":206
  *     qDot2 = 0.5 * (q0 * gx + q2 * gz - q3 * gy)
  *     qDot3 = 0.5 * (q0 * gy - q1 * gz + q3 * gx)
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)             # <<<<<<<<<<<<<<
@@ -6204,7 +6204,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   __pyx_v_qDot4 = (0.5 * (((__pyx_v_q0 * __pyx_v_gz) + (__pyx_v_q1 * __pyx_v_gy)) - (__pyx_v_q2 * __pyx_v_gx)));
 
-  /* "ahrs_cython/madgwick.pyx":205
+  /* "ahrs_cython/madgwick.pyx":208
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)
  * 
  *     if ax!=0 or ay!=0 or az!=0:             # <<<<<<<<<<<<<<
@@ -6228,7 +6228,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_6) {
 
-    /* "ahrs_cython/madgwick.pyx":207
+    /* "ahrs_cython/madgwick.pyx":210
  *     if ax!=0 or ay!=0 or az!=0:
  *         # Normalise accelerometer measurement
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)             # <<<<<<<<<<<<<<
@@ -6238,11 +6238,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
     __pyx_t_8 = sqrt((((__pyx_v_ax * __pyx_v_ax) + (__pyx_v_ay * __pyx_v_ay)) + (__pyx_v_az * __pyx_v_az)));
     if (unlikely(__pyx_t_8 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 207, __pyx_L1_error)
+      __PYX_ERR(0, 210, __pyx_L1_error)
     }
     __pyx_v_recipNorm = (1.0 / __pyx_t_8);
 
-    /* "ahrs_cython/madgwick.pyx":208
+    /* "ahrs_cython/madgwick.pyx":211
  *         # Normalise accelerometer measurement
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)
  *         ax *= recipNorm             # <<<<<<<<<<<<<<
@@ -6251,7 +6251,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_ax = (__pyx_v_ax * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":209
+    /* "ahrs_cython/madgwick.pyx":212
  *         recipNorm = 1.0/sqrt(ax * ax + ay * ay + az * az)
  *         ax *= recipNorm
  *         ay *= recipNorm             # <<<<<<<<<<<<<<
@@ -6260,7 +6260,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_ay = (__pyx_v_ay * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":210
+    /* "ahrs_cython/madgwick.pyx":213
  *         ax *= recipNorm
  *         ay *= recipNorm
  *         az *= recipNorm             # <<<<<<<<<<<<<<
@@ -6269,7 +6269,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_az = (__pyx_v_az * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":213
+    /* "ahrs_cython/madgwick.pyx":216
  * 
  *         # Normalise magnetometer measurement
  *         recipNorm = 1.0/sqrt(mx * mx + my * my + mz * mz)             # <<<<<<<<<<<<<<
@@ -6279,11 +6279,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
     __pyx_t_8 = sqrt((((__pyx_v_mx * __pyx_v_mx) + (__pyx_v_my * __pyx_v_my)) + (__pyx_v_mz * __pyx_v_mz)));
     if (unlikely(__pyx_t_8 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 213, __pyx_L1_error)
+      __PYX_ERR(0, 216, __pyx_L1_error)
     }
     __pyx_v_recipNorm = (1.0 / __pyx_t_8);
 
-    /* "ahrs_cython/madgwick.pyx":214
+    /* "ahrs_cython/madgwick.pyx":217
  *         # Normalise magnetometer measurement
  *         recipNorm = 1.0/sqrt(mx * mx + my * my + mz * mz)
  *         mx *= recipNorm             # <<<<<<<<<<<<<<
@@ -6292,7 +6292,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_mx = (__pyx_v_mx * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":215
+    /* "ahrs_cython/madgwick.pyx":218
  *         recipNorm = 1.0/sqrt(mx * mx + my * my + mz * mz)
  *         mx *= recipNorm
  *         my *= recipNorm             # <<<<<<<<<<<<<<
@@ -6301,7 +6301,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_my = (__pyx_v_my * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":216
+    /* "ahrs_cython/madgwick.pyx":219
  *         mx *= recipNorm
  *         my *= recipNorm
  *         mz *= recipNorm             # <<<<<<<<<<<<<<
@@ -6310,14 +6310,14 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_mz = (__pyx_v_mz * __pyx_v_recipNorm);
 
-    /* "ahrs_cython/madgwick.pyx":219
+    /* "ahrs_cython/madgwick.pyx":222
  * 
  *         # Gradient descent algorithm corrective step
  *         s0, s1, s2, s3 = gradientMadgwickAHRS(q0, q1, q2, q3, ax, ay, az, mx, my, mz)             # <<<<<<<<<<<<<<
  * 
  *         # Apply feedback step
  */
-    __pyx_t_9 = __pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(__pyx_v_q0, __pyx_v_q1, __pyx_v_q2, __pyx_v_q3, __pyx_v_ax, __pyx_v_ay, __pyx_v_az, __pyx_v_mx, __pyx_v_my, __pyx_v_mz); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 219, __pyx_L1_error)
+    __pyx_t_9 = __pyx_f_11ahrs_cython_8madgwick_gradientMadgwickAHRS(__pyx_v_q0, __pyx_v_q1, __pyx_v_q2, __pyx_v_q3, __pyx_v_ax, __pyx_v_ay, __pyx_v_az, __pyx_v_mx, __pyx_v_my, __pyx_v_mz); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 222, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     if ((likely(PyTuple_CheckExact(__pyx_t_9))) || (PyList_CheckExact(__pyx_t_9))) {
       PyObject* sequence = __pyx_t_9;
@@ -6325,7 +6325,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
       if (unlikely(size != 4)) {
         if (size > 4) __Pyx_RaiseTooManyValuesError(4);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 219, __pyx_L1_error)
+        __PYX_ERR(0, 222, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -6348,7 +6348,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
         Py_ssize_t i;
         PyObject** temps[4] = {&__pyx_t_10,&__pyx_t_11,&__pyx_t_12,&__pyx_t_13};
         for (i=0; i < 4; i++) {
-          PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 219, __pyx_L1_error)
+          PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 222, __pyx_L1_error)
           __Pyx_GOTREF(item);
           *(temps[i]) = item;
         }
@@ -6358,7 +6358,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
     } else {
       Py_ssize_t index = -1;
       PyObject** temps[4] = {&__pyx_t_10,&__pyx_t_11,&__pyx_t_12,&__pyx_t_13};
-      __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __pyx_t_14 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_15 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_14);
@@ -6367,7 +6367,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
         __Pyx_GOTREF(item);
         *(temps[index]) = item;
       }
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 4) < 0) __PYX_ERR(0, 219, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_14), 4) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
       __pyx_t_15 = NULL;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       goto __pyx_L8_unpacking_done;
@@ -6375,23 +6375,23 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 219, __pyx_L1_error)
+      __PYX_ERR(0, 222, __pyx_L1_error)
       __pyx_L8_unpacking_done:;
     }
-    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
+    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_t_10); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
+    __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_t_12); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
+    __pyx_t_17 = __pyx_PyFloat_AsDouble(__pyx_t_12); if (unlikely((__pyx_t_17 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
+    __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 222, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_v_s0 = __pyx_t_8;
     __pyx_v_s1 = __pyx_t_16;
     __pyx_v_s2 = __pyx_t_17;
     __pyx_v_s3 = __pyx_t_18;
 
-    /* "ahrs_cython/madgwick.pyx":222
+    /* "ahrs_cython/madgwick.pyx":225
  * 
  *         # Apply feedback step
  *         qDot1 -= beta * s0             # <<<<<<<<<<<<<<
@@ -6400,7 +6400,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_qDot1 = (__pyx_v_qDot1 - (__pyx_v_beta * __pyx_v_s0));
 
-    /* "ahrs_cython/madgwick.pyx":223
+    /* "ahrs_cython/madgwick.pyx":226
  *         # Apply feedback step
  *         qDot1 -= beta * s0
  *         qDot2 -= beta * s1             # <<<<<<<<<<<<<<
@@ -6409,7 +6409,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_qDot2 = (__pyx_v_qDot2 - (__pyx_v_beta * __pyx_v_s1));
 
-    /* "ahrs_cython/madgwick.pyx":224
+    /* "ahrs_cython/madgwick.pyx":227
  *         qDot1 -= beta * s0
  *         qDot2 -= beta * s1
  *         qDot3 -= beta * s2             # <<<<<<<<<<<<<<
@@ -6418,7 +6418,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_qDot3 = (__pyx_v_qDot3 - (__pyx_v_beta * __pyx_v_s2));
 
-    /* "ahrs_cython/madgwick.pyx":225
+    /* "ahrs_cython/madgwick.pyx":228
  *         qDot2 -= beta * s1
  *         qDot3 -= beta * s2
  *         qDot4 -= beta * s3             # <<<<<<<<<<<<<<
@@ -6427,7 +6427,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
     __pyx_v_qDot4 = (__pyx_v_qDot4 - (__pyx_v_beta * __pyx_v_s3));
 
-    /* "ahrs_cython/madgwick.pyx":205
+    /* "ahrs_cython/madgwick.pyx":208
  *     qDot4 = 0.5 * (q0 * gz + q1 * gy - q2 * gx)
  * 
  *     if ax!=0 or ay!=0 or az!=0:             # <<<<<<<<<<<<<<
@@ -6436,7 +6436,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   }
 
-  /* "ahrs_cython/madgwick.pyx":228
+  /* "ahrs_cython/madgwick.pyx":231
  * 
  *     # Integrate rate of change of quaternion
  *     q0 += qDot1 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -6445,11 +6445,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 228, __pyx_L1_error)
+    __PYX_ERR(0, 231, __pyx_L1_error)
   }
   __pyx_v_q0 = (__pyx_v_q0 + (__pyx_v_qDot1 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":229
+  /* "ahrs_cython/madgwick.pyx":232
  *     # Integrate rate of change of quaternion
  *     q0 += qDot1 * (1.0 / sampleFreq)
  *     q1 += qDot2 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -6458,11 +6458,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 229, __pyx_L1_error)
+    __PYX_ERR(0, 232, __pyx_L1_error)
   }
   __pyx_v_q1 = (__pyx_v_q1 + (__pyx_v_qDot2 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":230
+  /* "ahrs_cython/madgwick.pyx":233
  *     q0 += qDot1 * (1.0 / sampleFreq)
  *     q1 += qDot2 * (1.0 / sampleFreq)
  *     q2 += qDot3 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -6471,11 +6471,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 230, __pyx_L1_error)
+    __PYX_ERR(0, 233, __pyx_L1_error)
   }
   __pyx_v_q2 = (__pyx_v_q2 + (__pyx_v_qDot3 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":231
+  /* "ahrs_cython/madgwick.pyx":234
  *     q1 += qDot2 * (1.0 / sampleFreq)
  *     q2 += qDot3 * (1.0 / sampleFreq)
  *     q3 += qDot4 * (1.0 / sampleFreq)             # <<<<<<<<<<<<<<
@@ -6484,11 +6484,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
  */
   if (unlikely(__pyx_v_sampleFreq == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 231, __pyx_L1_error)
+    __PYX_ERR(0, 234, __pyx_L1_error)
   }
   __pyx_v_q3 = (__pyx_v_q3 + (__pyx_v_qDot4 * (1.0 / __pyx_v_sampleFreq)));
 
-  /* "ahrs_cython/madgwick.pyx":234
+  /* "ahrs_cython/madgwick.pyx":237
  * 
  *     # Normalise quaternion
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)             # <<<<<<<<<<<<<<
@@ -6498,11 +6498,11 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_t_18 = sqrt(((((__pyx_v_q0 * __pyx_v_q0) + (__pyx_v_q1 * __pyx_v_q1)) + (__pyx_v_q2 * __pyx_v_q2)) + (__pyx_v_q3 * __pyx_v_q3)));
   if (unlikely(__pyx_t_18 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 234, __pyx_L1_error)
+    __PYX_ERR(0, 237, __pyx_L1_error)
   }
   __pyx_v_recipNorm = (1.0 / __pyx_t_18);
 
-  /* "ahrs_cython/madgwick.pyx":235
+  /* "ahrs_cython/madgwick.pyx":238
  *     # Normalise quaternion
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)
  *     quatStep[0] = q0 * recipNorm             # <<<<<<<<<<<<<<
@@ -6512,7 +6512,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_t_1 = 0;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q0 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":236
+  /* "ahrs_cython/madgwick.pyx":239
  *     recipNorm = 1.0/sqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3)
  *     quatStep[0] = q0 * recipNorm
  *     quatStep[1] = q1 * recipNorm             # <<<<<<<<<<<<<<
@@ -6522,7 +6522,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_t_1 = 1;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q1 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":237
+  /* "ahrs_cython/madgwick.pyx":240
  *     quatStep[0] = q0 * recipNorm
  *     quatStep[1] = q1 * recipNorm
  *     quatStep[2] = q2 * recipNorm             # <<<<<<<<<<<<<<
@@ -6532,7 +6532,7 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_t_1 = 2;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q2 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":238
+  /* "ahrs_cython/madgwick.pyx":241
  *     quatStep[1] = q1 * recipNorm
  *     quatStep[2] = q2 * recipNorm
  *     quatStep[3] = q3 * recipNorm             # <<<<<<<<<<<<<<
@@ -6542,24 +6542,24 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   __pyx_t_1 = 3;
   *__Pyx_BufPtrStrided1d(__pyx_t_11ahrs_cython_8madgwick_DTYPE_t *, __pyx_pybuffernd_quatStep.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_quatStep.diminfo[0].strides) = (__pyx_v_q3 * __pyx_v_recipNorm);
 
-  /* "ahrs_cython/madgwick.pyx":240
+  /* "ahrs_cython/madgwick.pyx":243
  *     quatStep[3] = q3 * recipNorm
  * 
  *     return(quatStep)             # <<<<<<<<<<<<<<
  * 
- * @cython.boundscheck(False)
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_quatStep);
   __pyx_r = ((PyObject *)__pyx_v_quatStep);
   goto __pyx_L0;
 
-  /* "ahrs_cython/madgwick.pyx":182
+  /* "ahrs_cython/madgwick.pyx":185
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cdef madgwickAHRSStep(np.ndarray[DTYPE_t, ndim=1] accStep,             # <<<<<<<<<<<<<<
- *                                             np.ndarray[DTYPE_t, ndim=1] gyrStep,
- *                                             np.ndarray[DTYPE_t, ndim=1] magStep,
+ *                       np.ndarray[DTYPE_t, ndim=1] gyrStep,
+ *                       np.ndarray[DTYPE_t, ndim=1] magStep,
  */
 
   /* function exit code */
@@ -6593,8 +6593,8 @@ static PyObject *__pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(PyArrayObject 
   return __pyx_r;
 }
 
-/* "ahrs_cython/madgwick.pyx":242
- *     return(quatStep)
+/* "ahrs_cython/madgwick.pyx":246
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
@@ -6669,7 +6669,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -6677,9 +6677,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 1); __PYX_ERR(0, 242, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 1); __PYX_ERR(0, 246, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -6687,9 +6687,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 2); __PYX_ERR(0, 242, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 2); __PYX_ERR(0, 246, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -6697,9 +6697,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 3); __PYX_ERR(0, 242, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 3); __PYX_ERR(0, 246, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -6707,9 +6707,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 4); __PYX_ERR(0, 242, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 4); __PYX_ERR(0, 246, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -6717,14 +6717,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 5); __PYX_ERR(0, 242, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, 5); __PYX_ERR(0, 246, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "madgwickAHRS") < 0)) __PYX_ERR(0, 242, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "madgwickAHRS") < 0)) __PYX_ERR(0, 246, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 6)) {
       goto __pyx_L5_argtuple_error;
@@ -6740,12 +6740,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_gyr = ((PyArrayObject *)values[1]);
     __pyx_v_mag = ((PyArrayObject *)values[2]);
     __pyx_v_quat0 = ((PyArrayObject *)values[3]);
-    __pyx_v_beta = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_beta == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L3_error)
-    __pyx_v_sampleFreq = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_sampleFreq == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 248, __pyx_L3_error)
+    __pyx_v_beta = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_beta == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 252, __pyx_L3_error)
+    __pyx_v_sampleFreq = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_sampleFreq == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 252, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, __pyx_nargs); __PYX_ERR(0, 242, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("madgwickAHRS", 1, 6, 6, __pyx_nargs); __PYX_ERR(0, 246, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6759,10 +6759,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_acc), __pyx_ptype_5numpy_ndarray, 1, "acc", 0))) __PYX_ERR(0, 244, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_gyr), __pyx_ptype_5numpy_ndarray, 1, "gyr", 0))) __PYX_ERR(0, 245, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mag), __pyx_ptype_5numpy_ndarray, 1, "mag", 0))) __PYX_ERR(0, 246, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quat0), __pyx_ptype_5numpy_ndarray, 1, "quat0", 0))) __PYX_ERR(0, 247, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_acc), __pyx_ptype_5numpy_ndarray, 1, "acc", 0))) __PYX_ERR(0, 248, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_gyr), __pyx_ptype_5numpy_ndarray, 1, "gyr", 0))) __PYX_ERR(0, 249, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mag), __pyx_ptype_5numpy_ndarray, 1, "mag", 0))) __PYX_ERR(0, 250, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_quat0), __pyx_ptype_5numpy_ndarray, 1, "quat0", 0))) __PYX_ERR(0, 251, __pyx_L1_error)
   __pyx_r = __pyx_pf_11ahrs_cython_8madgwick_2madgwickAHRS(__pyx_self, __pyx_v_acc, __pyx_v_gyr, __pyx_v_mag, __pyx_v_quat0, __pyx_v_beta, __pyx_v_sampleFreq);
 
   /* function exit code */
@@ -6834,92 +6834,92 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_2madgwickAHRS(CYTHON_UNUSED Py
   __pyx_pybuffernd_quat0.rcbuffer = &__pyx_pybuffer_quat0;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_acc.rcbuffer->pybuffer, (PyObject*)__pyx_v_acc, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 242, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_acc.rcbuffer->pybuffer, (PyObject*)__pyx_v_acc, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 246, __pyx_L1_error)
   }
   __pyx_pybuffernd_acc.diminfo[0].strides = __pyx_pybuffernd_acc.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_acc.diminfo[0].shape = __pyx_pybuffernd_acc.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_acc.diminfo[1].strides = __pyx_pybuffernd_acc.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_acc.diminfo[1].shape = __pyx_pybuffernd_acc.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyr.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyr, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 242, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_gyr.rcbuffer->pybuffer, (PyObject*)__pyx_v_gyr, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 246, __pyx_L1_error)
   }
   __pyx_pybuffernd_gyr.diminfo[0].strides = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_gyr.diminfo[0].shape = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_gyr.diminfo[1].strides = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_gyr.diminfo[1].shape = __pyx_pybuffernd_gyr.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_mag.rcbuffer->pybuffer, (PyObject*)__pyx_v_mag, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 242, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_mag.rcbuffer->pybuffer, (PyObject*)__pyx_v_mag, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 246, __pyx_L1_error)
   }
   __pyx_pybuffernd_mag.diminfo[0].strides = __pyx_pybuffernd_mag.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_mag.diminfo[0].shape = __pyx_pybuffernd_mag.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_mag.diminfo[1].strides = __pyx_pybuffernd_mag.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_mag.diminfo[1].shape = __pyx_pybuffernd_mag.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat0.rcbuffer->pybuffer, (PyObject*)__pyx_v_quat0, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 242, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat0.rcbuffer->pybuffer, (PyObject*)__pyx_v_quat0, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 246, __pyx_L1_error)
   }
   __pyx_pybuffernd_quat0.diminfo[0].strides = __pyx_pybuffernd_quat0.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quat0.diminfo[0].shape = __pyx_pybuffernd_quat0.rcbuffer->pybuffer.shape[0];
 
-  /* "ahrs_cython/madgwick.pyx":249
- *                                 np.ndarray[DTYPE_t, ndim=1] quat0,
- *                                 double beta, double sampleFreq):
- *     cdef int n_row    = acc.shape[0]             # <<<<<<<<<<<<<<
+  /* "ahrs_cython/madgwick.pyx":253
+ *                  np.ndarray[DTYPE_t, ndim=1] quat0,
+ *                  double beta, double sampleFreq):
+ *     cdef int n_row = acc.shape[0]             # <<<<<<<<<<<<<<
  *     cdef int row = 0
- *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
+ *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)
  */
-  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_acc)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_acc)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 253, __pyx_L1_error)
   __pyx_v_n_row = (__pyx_t_1[0]);
 
-  /* "ahrs_cython/madgwick.pyx":250
- *                                 double beta, double sampleFreq):
- *     cdef int n_row    = acc.shape[0]
+  /* "ahrs_cython/madgwick.pyx":254
+ *                  double beta, double sampleFreq):
+ *     cdef int n_row = acc.shape[0]
  *     cdef int row = 0             # <<<<<<<<<<<<<<
- *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
+ *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)
  *     quat[0,:] = quat0
  */
   __pyx_v_row = 0;
 
-  /* "ahrs_cython/madgwick.pyx":251
- *     cdef int n_row    = acc.shape[0]
+  /* "ahrs_cython/madgwick.pyx":255
+ *     cdef int n_row = acc.shape[0]
  *     cdef int row = 0
- *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
+ *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)             # <<<<<<<<<<<<<<
  *     quat[0,:] = quat0
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_n_row + 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_n_row + 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error);
   __Pyx_INCREF(__pyx_int_4);
   __Pyx_GIVEREF(__pyx_int_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_int_4)) __PYX_ERR(0, 251, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_int_4)) __PYX_ERR(0, 255, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 251, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 251, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 251, __pyx_L1_error)
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 255, __pyx_L1_error)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_6);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_quat.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_11ahrs_cython_8madgwick_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_quat = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_quat.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 251, __pyx_L1_error)
+      __PYX_ERR(0, 255, __pyx_L1_error)
     } else {__pyx_pybuffernd_quat.diminfo[0].strides = __pyx_pybuffernd_quat.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_quat.diminfo[0].shape = __pyx_pybuffernd_quat.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_quat.diminfo[1].strides = __pyx_pybuffernd_quat.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_quat.diminfo[1].shape = __pyx_pybuffernd_quat.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -6927,16 +6927,16 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_2madgwickAHRS(CYTHON_UNUSED Py
   __pyx_v_quat = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "ahrs_cython/madgwick.pyx":252
+  /* "ahrs_cython/madgwick.pyx":256
  *     cdef int row = 0
- *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
+ *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)
  *     quat[0,:] = quat0             # <<<<<<<<<<<<<<
  * 
  *     # Iteratively update the value of the quaternion and store it in quat
  */
-  if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_quat), __pyx_tuple__4, ((PyObject *)__pyx_v_quat0)) < 0))) __PYX_ERR(0, 252, __pyx_L1_error)
+  if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_quat), __pyx_tuple__4, ((PyObject *)__pyx_v_quat0)) < 0))) __PYX_ERR(0, 256, __pyx_L1_error)
 
-  /* "ahrs_cython/madgwick.pyx":255
+  /* "ahrs_cython/madgwick.pyx":259
  * 
  *     # Iteratively update the value of the quaternion and store it in quat
  *     for row in range(n_row):             # <<<<<<<<<<<<<<
@@ -6948,46 +6948,46 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_2madgwickAHRS(CYTHON_UNUSED Py
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_row = __pyx_t_10;
 
-    /* "ahrs_cython/madgwick.pyx":256
+    /* "ahrs_cython/madgwick.pyx":260
  *     # Iteratively update the value of the quaternion and store it in quat
  *     for row in range(n_row):
  *         quatStep = quat[row]             # <<<<<<<<<<<<<<
  *         quat[row+1] = madgwickAHRSStep(acc[row], gyr[row], mag[row], quatStep, beta, sampleFreq)
  * 
  */
-    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_quat), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_quat), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 260, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_XDECREF_SET(__pyx_v_quatStep, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ahrs_cython/madgwick.pyx":257
+    /* "ahrs_cython/madgwick.pyx":261
  *     for row in range(n_row):
  *         quatStep = quat[row]
  *         quat[row+1] = madgwickAHRSStep(acc[row], gyr[row], mag[row], quatStep, beta, sampleFreq)             # <<<<<<<<<<<<<<
  * 
  *     return(quat)
  */
-    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_acc), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(((PyObject *)__pyx_v_acc), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 257, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_gyr), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
+    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_gyr), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 257, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_mag), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
+    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_mag), __pyx_v_row, int, 1, __Pyx_PyInt_From_int, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 257, __pyx_L1_error)
-    if (!(likely(((__pyx_v_quatStep) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_quatStep, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 257, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(((PyArrayObject *)__pyx_t_6), ((PyArrayObject *)__pyx_t_4), ((PyArrayObject *)__pyx_t_2), ((PyArrayObject *)__pyx_v_quatStep), __pyx_v_beta, __pyx_v_sampleFreq); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 261, __pyx_L1_error)
+    if (!(likely(((__pyx_v_quatStep) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_quatStep, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_11ahrs_cython_8madgwick_madgwickAHRSStep(((PyArrayObject *)__pyx_t_6), ((PyArrayObject *)__pyx_t_4), ((PyArrayObject *)__pyx_t_2), ((PyArrayObject *)__pyx_v_quatStep), __pyx_v_beta, __pyx_v_sampleFreq); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_11 = (__pyx_v_row + 1);
-    if (unlikely((__Pyx_SetItemInt(((PyObject *)__pyx_v_quat), __pyx_t_11, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 0) < 0))) __PYX_ERR(0, 257, __pyx_L1_error)
+    if (unlikely((__Pyx_SetItemInt(((PyObject *)__pyx_v_quat), __pyx_t_11, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 0) < 0))) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "ahrs_cython/madgwick.pyx":259
+  /* "ahrs_cython/madgwick.pyx":263
  *         quat[row+1] = madgwickAHRSStep(acc[row], gyr[row], mag[row], quatStep, beta, sampleFreq)
  * 
  *     return(quat)             # <<<<<<<<<<<<<<
@@ -6997,8 +6997,8 @@ static PyObject *__pyx_pf_11ahrs_cython_8madgwick_2madgwickAHRS(CYTHON_UNUSED Py
   __pyx_r = ((PyObject *)__pyx_v_quat);
   goto __pyx_L0;
 
-  /* "ahrs_cython/madgwick.pyx":242
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":246
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
@@ -7096,7 +7096,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 118, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 986, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -7130,43 +7130,43 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "ahrs_cython/madgwick.pyx":114
+  /* "ahrs_cython/madgwick.pyx":116
  *     cdef int row = 0
  *     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row+1, 4), dtype=np.float64)
  *     quat[0,:] = quat0             # <<<<<<<<<<<<<<
  * 
  *     for row in range(n_row):
  */
-  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_slice__3 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_slice__3); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_slice__3); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "ahrs_cython/madgwick.pyx":104
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":106
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
  * def madgwickIMU(np.ndarray[DTYPE_t, ndim=2] acc,
  */
-  __pyx_tuple__6 = PyTuple_Pack(9, __pyx_n_s_acc, __pyx_n_s_gyr, __pyx_n_s_quat0, __pyx_n_s_beta, __pyx_n_s_sampleFreq, __pyx_n_s_n_row, __pyx_n_s_row, __pyx_n_s_quat, __pyx_n_s_quatStep); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(9, __pyx_n_s_acc, __pyx_n_s_gyr, __pyx_n_s_quat0, __pyx_n_s_beta, __pyx_n_s_sampleFreq, __pyx_n_s_n_row, __pyx_n_s_row, __pyx_n_s_quat, __pyx_n_s_quatStep); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ahrs_cython_madgwick_pyx, __pyx_n_s_madgwickIMU, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ahrs_cython_madgwick_pyx, __pyx_n_s_madgwickIMU, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 106, __pyx_L1_error)
 
-  /* "ahrs_cython/madgwick.pyx":242
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":246
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
  * def madgwickAHRS(np.ndarray[DTYPE_t, ndim=2] acc,
  */
-  __pyx_tuple__8 = PyTuple_Pack(10, __pyx_n_s_acc, __pyx_n_s_gyr, __pyx_n_s_mag, __pyx_n_s_quat0, __pyx_n_s_beta, __pyx_n_s_sampleFreq, __pyx_n_s_n_row, __pyx_n_s_row, __pyx_n_s_quat, __pyx_n_s_quatStep); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(10, __pyx_n_s_acc, __pyx_n_s_gyr, __pyx_n_s_mag, __pyx_n_s_quat0, __pyx_n_s_beta, __pyx_n_s_sampleFreq, __pyx_n_s_n_row, __pyx_n_s_row, __pyx_n_s_quat, __pyx_n_s_quatStep); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ahrs_cython_madgwick_pyx, __pyx_n_s_madgwickAHRS, 242, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ahrs_cython_madgwick_pyx, __pyx_n_s_madgwickAHRS, 246, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -7618,28 +7618,28 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE, __pyx_t_3) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ahrs_cython/madgwick.pyx":104
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":106
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
  * def madgwickIMU(np.ndarray[DTYPE_t, ndim=2] acc,
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_11ahrs_cython_8madgwick_1madgwickIMU, 0, __pyx_n_s_madgwickIMU, NULL, __pyx_n_s_ahrs_cython_madgwick, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_11ahrs_cython_8madgwick_1madgwickIMU, 0, __pyx_n_s_madgwickIMU, NULL, __pyx_n_s_ahrs_cython_madgwick, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_madgwickIMU, __pyx_t_3) < 0) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_madgwickIMU, __pyx_t_3) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ahrs_cython/madgwick.pyx":242
- *     return(quatStep)
+  /* "ahrs_cython/madgwick.pyx":246
+ * 
  * 
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
  * def madgwickAHRS(np.ndarray[DTYPE_t, ndim=2] acc,
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_11ahrs_cython_8madgwick_3madgwickAHRS, 0, __pyx_n_s_madgwickAHRS, NULL, __pyx_n_s_ahrs_cython_madgwick, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_11ahrs_cython_8madgwick_3madgwickAHRS, 0, __pyx_n_s_madgwickAHRS, NULL, __pyx_n_s_ahrs_cython_madgwick, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_madgwickAHRS, __pyx_t_3) < 0) __PYX_ERR(0, 242, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_madgwickAHRS, __pyx_t_3) < 0) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "ahrs_cython/madgwick.pyx":1
