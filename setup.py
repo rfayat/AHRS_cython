@@ -20,5 +20,6 @@ setup(
     ext_modules=cythonize("ahrs_cython/*.pyx"),
     include_dirs=[np.get_include()],
     install_requires=["numpy", "Cython", "ahrs"],
+    packages=["ahrs_cython"],
     long_description=read('README.md')
 )
