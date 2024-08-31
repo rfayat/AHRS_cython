@@ -19,7 +19,7 @@ setup(
     description="Cython implementation of AHRS filters.",
     ext_modules=cythonize("ahrs_cython/*.pyx"),
     include_dirs=[np.get_include()],
-    install_requires=["numpy", "Cython", "ahrs"],
+    install_requires=["numpy", "Cython", "ahrs==0.3.0"],
     packages=["ahrs_cython"],
     long_description=read('README.md')
 )
