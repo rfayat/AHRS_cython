@@ -20,6 +20,5 @@ setup(
     ext_modules=cythonize("ahrs_cython/*.pyx"),
     include_dirs=[np.get_include()],
     install_requires=["numpy", "Cython", "ahrs"],
-    packages=["madgwick"],
     long_description=read('README.md')
 )
