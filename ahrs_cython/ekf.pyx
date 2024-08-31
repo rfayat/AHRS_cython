@@ -96,18 +96,20 @@ cdef ekfIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,
                 double dt,
                 double g_noise,
                 np.ndarray[DTYPE_t, ndim=1] a_ref,
-                np.ndarray[DTYPE_t, ndim=2] R):
+                np.ndarray[DTYPE_t, ndim=2] R,
+                np.ndarray[DTYPE_t, ndim=2] P):
     cdef np.ndarray[DTYPE_t, ndim=1] z, q_t, v, q, y
-    cdef np.ndarray[DTYPE_t, ndim=2] H, S, Q_t, W, P_t, F, K, S_inv, P
+    cdef np.ndarray[DTYPE_t, ndim=2] H, S, Q_t, W, P_t, F, K, S_inv, P_new
     cdef double a_norm = np.linalg.norm(accStep)
     if a_norm < 1e-6:
         return quatStep
     z = accStep / a_norm
     q_t = f(quatStep, gyrStep, dt)
     F = dfdq(gyrStep, dt)
+    # W   = 0.5*self.Dt * np.r_[[-q[1:]], q[0]*np.identity(3) + skew(q[1:])]
     W = .5 * dt * np.vstack((-quatStep[1:].reshape(1, -1), quatStep[0] * np.identity(3, dtype=np.float64) + skew(quatStep[1:])))
     Q_t = .5 * dt * g_noise * np.matmul(W, np.transpose(W))
-    P_t = np.matmul(F, np.transpose(F)) + Q_t
+    P_t = np.matmul(np.matmul(F, P), np.transpose(F)) + Q_t
     
     y = h(q_t, a_ref)
     v = z - y
@@ -115,11 +117,10 @@ cdef ekfIMUStep(np.ndarray[DTYPE_t, ndim=1] accStep,
     S = np.matmul(np.matmul(H, P_t), np.transpose(H)) + R
     S_inv = np.linalg.inv(S)
     K = np.matmul(np.matmul(P_t, np.transpose(H)), S_inv)
-    # Return updated P ?
-    P = np.matmul(np.identity(4) - np.matmul(K, H), P_t)
+    P_new = np.matmul(np.identity(4) - np.matmul(K, H), P_t)
     q = q_t + np.matmul(K, v)
     q = q / np.linalg.norm(q)
-    return q
+    return q, P_new
 
 
 @cython.boundscheck(False)
@@ -130,14 +131,18 @@ def ekfIMU(np.ndarray[DTYPE_t, ndim=2] acc,
            double sampleFreq,
            double g_noise,
            np.ndarray[DTYPE_t, ndim=1] a_ref,
-           np.ndarray[DTYPE_t, ndim=2] R):
+           np.ndarray[DTYPE_t, ndim=2] R,
+           np.ndarray[DTYPE_t, ndim=2] P0):
+    cdef np.ndarray[DTYPE_t, ndim=2] P
     cdef double dt = 1 / sampleFreq
     cdef int n_row = acc.shape[0]
     cdef np.ndarray[DTYPE_t, ndim=2] quat = np.zeros((n_row + 1, 4), dtype=np.float64)
     quat[0,:] = quat0
+    P = P0
 
     for row in range(n_row):
-        quat[row+1] = ekfIMUStep(acc[row], gyr[row], quat[row],
-                                dt, g_noise, a_ref, R)
+        quat[row+1], P_new = ekfIMUStep(acc[row], gyr[row], quat[row],
+                                        dt, g_noise, a_ref, R, P)
+        P = P_new
 
     return(quat)

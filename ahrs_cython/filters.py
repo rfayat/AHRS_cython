@@ -81,7 +81,7 @@ class EKF(EKF_ahrs):
         if self.mag is not None:
             raise(NotImplementedError, "EKF with input mag data is not implemented.")
         return ekfIMU(self.acc, self.gyr, self.q0, self.frequency,
-                      self.g_noise, self.a_ref, self.R)[:-1]
+                      self.g_noise, self.a_ref, self.R, self.P)[:-1]
     
     def _compute_q0(self):
         "Compute the initial quaternion for the iterative algorithm."
